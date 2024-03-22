@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dynamic_app</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../Dynamic_app/assets/img/favicon.png" rel="icon">
+  <link href="../Dynamic_app/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../Dynamic_app/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../Dynamic_app/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../Dynamic_app/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../Dynamic_app/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../Dynamic_app/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../Dynamic_app/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+  <link href="../Dynamic_app/assets/css/explain.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <a href="../Dynamic_app/index.html">
+        <img src="../Dynamic_app/assets/img/Dynamic.png" class="logo"/>
+      </a>
+      
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="../Dynamic_app/index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="#basics">basics</a></li>
+          <li><a class="nav-link scrollto" href="#malloc">malloc</a></li>
+          <li><a class="nav-link scrollto" href="#calloc">calloc</a></li>
+          <li><a class="nav-link scrollto" href="#realloc">realloc</a></li>
+          <li><a class="nav-link scrollto" href="#free">free</a></li>
+          <li class="dropdown"><a href="#topics"><span>practice</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="../Dynamic_app/Exm/front.html">basics</a></li>
+            
+            </ul>
+          </li>
+          </li>   
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main class="main" id="main">
+
+
+    <!-- ======= basics Section ======= -->
+    <section id="basics" class="basics">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Basics</h2>
+        </div>
+        <div class="basics-content">
+            <h1>Dynamic memory allocation in C</h1><br>
+            
+            <p>Since C is a structured language, it has some fixed rules for programming. One of them includes changing the size of an array. An array is a collection of items stored at contiguous memory locations. </p><br><br>
+            <span><img src="../Dynamic_app/assets/img/notes/basic1.png"/></span><br><br>
+            <p>As can be seen, the length (size) of the array above is 9. But what if there is a requirement to change this length (size)? For example, <br><br>
+            <ul><li>If there is a situation where only 5 elements are needed to be entered in this array. In this case, the remaining 4 indices are just wasting memory in this array. So there is a requirement to lessen the length (size) of the array from 9 to 5.  </li><br>
+             <li> Take another situation. In this, there is an array of 9 elements with all 9 indices filled. But there is a need to enter 3 more elements in this array. In this case, 3 indices more are required. So the length (size) of the array needs to be changed from 9 to 12.  </li><br>
+            </ul> 
+
+              <p>This procedure is referred to as Dynamic Memory Allocation in C.<br>
+              Therefore, C Dynamic Memory Allocation can be defined as a procedure in which the size of a data structure (like Array) is changed during the runtime.</p>
+             
+
+              <p>To allocate memory dynamically, library functions are <b>malloc(), calloc(), realloc() and free()</b> are used. These functions are defined in the <b>stdlib.h</b> header file.</p>
+        </div>
+      </div>
+    </section><!-- End About Section -->
+
+
+    <!-- ======= malloc Section ======= -->
+    <section id="malloc" class="malloc" style="background-color:aliceblue;">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>malloc()</h2>
+        </div>
+        <div class="basics-content">
+            <h3>malloc()</h3><br>
+            <ul>
+              <li>The malloc() function allocates single block of requested memory.</li><br>
+
+            <li>It doesn't initialize memory at execution time, so it has garbage value initially.</li> <br>
+                
+               <li> It returns NULL if memory is not sufficient.</li><br>
+            </ul>
+
+            <h4>Syntax</h4>
+            <div class="syntax" style="background-color: black; height: 60px; width: fit-content; border-radius:25px;">
+             <h5 style="color:blanchedalmond; margin-left: 50px; margin-right: 50px; padding-top: 16px; ">ptr = (cast-type*) malloc(byte-size)</h5>
+            </div><br>
+            <p></p>
+
+            <iframe src="https://youtube.com/embed/Vch7_YeGKH4" noborder="0" width="830" height="400" scrolling="yes" seamless></iframe><br><br>
+            
+      </div>
+      
+    </section>
+
+    <!-- =======calloc Section ======= -->
+    <section id="calloc" class="calloc">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>calloc()</h2>
+        </div>
+        <div class="basics-content">
+            <h3>calloc()</h3><br>
+
+            <ul>
+              <li>The calloc() function allocates multiple block of requested memory.</li><br>
+
+              <li>It initially initialize all bytes to zero.</li><br>
+            
+              <li>It returns NULL if memory is not sufficient</li><br>
+            </ul>
+
+
+            <h4>Syntax</h4>
+            <div class="syntax" style="background-color: black; height: 60px; width: fit-content; border-radius:25px;">
+             <h5 style="color:blanchedalmond; margin-left: 50px; margin-right: 50px; padding-top: 16px; ">ptr = (cast-type*)calloc(n, element-size);</h5>
+            </div><br>
+            <p>here, n is the no. of elements and element-size is the size of each element.</p>
+
+            <iframe src="https://youtube.com/embed/8q0jLDun0_0" noborder="0" width="830" height="400" scrolling="yes" seamless></iframe><br><br>
+            
+      </div>
+      
+    </section>
+
+     <!-- =======relloc Section ======= -->
+     <section id="realloc" class="" style="background-color:aliceblue;">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>realloc()</h2>
+        </div>
+        <div class="basics-content">
+            <h3>realloc()</h3><br>
+
+            <ul>
+              <li>“realloc” or “re-allocation” method in C is used to dynamically change the memory allocation of a previously allocated memory</li><br>
+
+              <li>In other words, if the memory previously allocated with the help of malloc or calloc is insufficient, realloc can be used to dynamically re-allocate memory. re-allocation of memory maintains the already present value and new blocks will be initialized with the default garbage value.</li><br>
+          
+
+
+            <h4>Syntax</h4>
+            <div class="syntax" style="background-color: black; height: 60px; width: fit-content; border-radius:25px;">
+             <h5 style="color:blanchedalmond; margin-left: 50px; margin-right: 50px; padding-top: 16px; ">ptr = realloc(ptr, newSize);</h5>
+            </div><br>
+            <p>where ptr is reallocated with new size 'newSize'.</p>
+
+            <iframe src="https://youtube.com/embed/j1jo8QQT7zw" noborder="0" width="830" height="400" scrolling="yes" seamless></iframe><br><br>
+            
+      </div>
+      
+    </section>
+
+    <!-- =======free Section ======= -->
+    <section id="free" class="free" >
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>free()</h2>
+        </div>
+        <div class="basics-content">
+            <h3>free()</h3><br>
+
+            <ul>
+              <li> The memory allocated using functions malloc() and calloc() is not de-allocated on their own. Hence the free() method is used, whenever the dynamic memory allocation takes place. It helps to reduce wastage of memory by freeing it.</li><br></ul>
+
+
+            <h4>Syntax</h4>
+            <div class="syntax" style="background-color: black; height: 60px; width: fit-content; border-radius:25px;">
+             <h5 style="color:blanchedalmond; margin-left: 50px; margin-right: 50px; padding-top: 16px; ">free(ptr);</h5>
+            </div><br>
+            
+            <iframe src="https://youtube.com/embed/qG0wUzuBI_A" noborder="0" width="830" height="400" scrolling="yes" seamless></iframe><br><br>
+          
+      </div>
+      
+    </section>
+
+
+
+    
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../Dynamic_app/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../Dynamic_app/assets/vendor/aos/aos.js"></script>
+  <script src="../Dynamic_app/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../Dynamic_app/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../Dynamic_app/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../Dynamic_app/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../Dynamic_app/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../Dynamic_app/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../Dynamic_app/assets/js/main.js"></script>
+
+</body>
+
+</html>
